@@ -1,0 +1,53 @@
+<div class="row vh-100">
+    <div class="col-lg-4 ">
+        
+    </div>
+    <div class="col-lg-4 d-flex align-items-center">
+       <div class="card shadow ">
+        <div class="card-body">
+            <form [formGroup]="loginForm"  (ngSubmit)="onSubmit(loginForm)" autocomplete="off" >
+                <div class="row form-group">
+                    <ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-admin-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Admin</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-user-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">Employee</button>
+                        </li>
+                        
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="mb-3">
+                                <label for="username"  class="form-label">Username</label>
+                                <input type="text" class="form-control"   formControlName="username" name="username" placeholder=" Enter Username" required>
+                                <div class="text-danger" *ngIf="(loginformControl.username.touched || submitted) && loginformControl.username.errors ?.['required']">Username is required.</div>
+ 
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="password">Password</label>
+                                <input type="password"  class="form-control" formControlName="password"  name="password" placeholder="Enter password" >
+                                <div class="text-danger" *ngIf="(loginformControl.password.touched || submitted) && loginformControl.password.errors ?.['required']">Password is required.</div>
+ 
+                              </div>
+                            <button  type="submit" class="btn btn-primary" >Submit</button>
+                            <div>
+
+                        </div>
+                       
+                       
+                      </div>
+                    
+                        
+                    </div>
+                </div>
+            </form> 
+            
+            
+        </div>
+       </div>
+    </div>
+    <div class="col-lg-4">
+       
+    </div>
+</div>

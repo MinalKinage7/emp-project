@@ -1,30 +1,36 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { AddEmpComponent } from './add-emp/add-emp.component';
-import { EmpListComponent } from './emp-list/emp-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { EditEmpComponent } from './edit-emp/edit-emp.component'
 
-
+import { AdminModule } from './admin/admin.module';
+import { UserAuthModule } from './user-auth/user-auth.module';
+import { RouterLink } from '@angular/router';
+import { EmployeeModule } from './employee/employee.module';
 @NgModule({
   declarations: [
     AppComponent,
-    AddEmpComponent,
-    EmpListComponent,
-    EditEmpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    AdminModule,
+    UserAuthModule,
+    RouterLink,
+    EmployeeModule
+    
   ],
+ 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent ],
+
 })
 export class AppModule {
 

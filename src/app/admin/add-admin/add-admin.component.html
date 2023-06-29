@@ -1,0 +1,68 @@
+
+
+<div class="container mt-3">
+  <h4 class="text-dark my-3">Add Admin</h4>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit(addForm)"  novalidate>
+      <div class="row">
+        <div class="col-lg-6">
+        <label for="first_name form-group">First Name  </label> <br>
+        <input type="text" name="first_name" class="form-control" formControlName="first_name"   placeholder="Enter First Name" required/>
+        <div class="text-danger" *ngIf="(addAdminFormControl.first_name.touched || submitted) && addAdminFormControl.first_name.errors ?.['required']">First name is required.</div>
+        </div>
+        <div class="col-lg-6">
+          <label for="last_name">Last Name: </label><br>
+          <input type="text" name="last_name" class="form-control"  formControlName="last_name"  placeholder="Enter Last Name" required/>
+          <div class="text-danger" *ngIf="(addAdminFormControl.last_name.touched || submitted) && addAdminFormControl.last_name.errors ?.['required']">Last Name is required.</div>
+        </div>
+        <div class="col-lg-6">
+          <label for="gender">Gender: </label>
+          <div class="d-flex"><div class="form-check">
+            <input formControlName="gender" type="radio" class="form-check-input" id="radio1" name="gender" value="Male" checked>
+            <label class="form-check-label" for="radio1">Male</label>
+          </div>
+         <div class="form-check ms-2">
+            <input formControlName="gender" type="radio" class="form-check-input" id="radio2" name="gender" value="Female">
+            <label class="form-check-label" for="radio2">Female</label>
+          </div>
+        </div>
+          </div>
+          
+        <div class="col-lg-6">
+          <label for="organisation">Organisation: </label><br>
+          <input type="text" name="organisation" class="form-control"  formControlName="organisation"  placeholder="Enter Organisation Name" required/>
+          <div class="text-danger" *ngIf="(addAdminFormControl.organisation.touched || submitted) && addAdminFormControl.organisation.errors ?.['required']"> Oraganisation name is required.</div>
+        </div>
+        <div class="col-lg-6">
+            <label for="role">Admin Permission Role: </label><br>
+            <select class="form-select" name="role"  class="form-control form-control-sm" formControlName="role"  aria-label="Default select example">
+                <option value="1">Add Role</option>
+                <option value="2">Add/Edit Role</option>
+                <option value="3">Full Access</option>
+              </select>
+              <div class="text-danger" *ngIf="(addAdminFormControl.role.touched || submitted) && addAdminFormControl.role.errors ?.['required']"> Role is required.</div>
+          </div>
+        <div class="col-lg-6">
+          <label for="manager_name">Manger Name: </label><br>
+          <input type="text" name="manager_name" class="form-control"  formControlName="manager_name" placeholder="Enter Manager Name" required/>
+          <div class="text-danger" *ngIf="(addAdminFormControl.manager_name.touched || submitted) && addAdminFormControl.manager_name.errors ?.['required']">Manager name is required.</div>
+        </div>
+        <div class="col-lg-6">
+          <label for="EmpNo">Employee Number: </label><br>
+          <input type="number" name="EmpNo" class="form-control" formControlName="EmpNo" placeholder="Enter Employee Number" required/>
+          <div class="text-danger" *ngIf="(addAdminFormControl.EmpNo.touched || submitted) && addAdminFormControl.EmpNo.errors ?.['required']">Employee number is required.</div>
+        </div>
+        
+        <div class="col-lg-6">
+          <label for="salary">Salary: </label><br>
+          <input type="number" name="salary" class="form-control" formControlName="salary" placeholder="Enter salary" required/>
+          <div class="text-danger" *ngIf="(addAdminFormControl.salary.touched || submitted) && addAdminFormControl.salary.errors ?.['required']">salary is reuired.</div>
+        </div>
+        <div class="col-lg-12">
+          <button  type="= submit"  class="btn btn-outline-info mt-3" >Submit</button>
+        </div>
+       
+      </div>
+         
+    </form>
+  
+  </div>

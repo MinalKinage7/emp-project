@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { FormGroup, FormControl, Validators } from "@angular/forms"
 import { Router } from '@angular/router';
-import { Employee } from '../interaces/empint';
+import { Employee } from '../../interaces/empint';
 
 @Component({
   selector: 'app-edit-emp',
