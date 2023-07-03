@@ -21,21 +21,10 @@ export class EmpListComponent {
 
 
   ngOnInit(){
-    //  this.ObjDataSourse.push(this.obj);
+   
     this.adminValue = this.obj.is_admin; 
     this.roleValue = this.obj.role;
-    //  if(this.ObjDataSourse[0].is_admin == true)
-    //   this.adminValue = true;
-    //   else{
-    //     this.adminValue = false;
-    //   }
-
-    //   if(this.ObjDataSourse[0].role == 1 || this.ObjDataSourse[0].role == 3){
-    //     this.roleValue = true;
-    //   }
-    //   else{
-    //     this.roleValue = false;
-    //   }
+   
   }
 
   

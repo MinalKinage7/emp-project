@@ -6,4 +6,6 @@ export interface Employee {
     id: number;
     manager_name: string;
     organisation: string;
+    EmpNo:string
+    role:number
 }
